@@ -1,11 +1,11 @@
 name: event-dispatcher
 
 on:
-
-workflow-run:
-  workflows: [ci]
-  types:
-    - completed
+  workflow-run:
+    workflows: [ci]
+    branches: [dev]
+    types:
+      - completed
 
 jobs:
   dispatch-event:
