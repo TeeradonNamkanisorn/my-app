@@ -18,4 +18,4 @@ jobs:
       - name: Build docker image
         run: docker build -t my-app .
       - name: Push docker image
-        run: docker push my-app
+        run: docker push ${{ secrets.DOCKERUSERNAME }}/my-app
